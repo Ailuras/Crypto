@@ -1,0 +1,16 @@
+MiniZinc Solver Performance Comparison
+==================================================
+Models directory: benchmarks/CP
+Timeout: 1800s
+Solvers: org.minizinc.mip.coin-bc, cp-sat
+Platform: darwin
+
+Found 5 model files:
+  - alzette/Alzette.mzn
+  - chaskey/Chaskey.mzn
+  - siphash/SipHash.mzn
+  - speck/Speck.mzn
+  - xoodoo/xoodoo.mzn
+
+🔧 Testing Alzette (alzette/Alzette.mzn):
+  Testing org.minizinc.mip.coin-bc... 

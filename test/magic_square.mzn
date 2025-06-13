@@ -1,0 +1,10 @@
+include "alldifferent.mzn";
+int: n = 3;
+array[1..n, 1..n] of var 1..n*n: square;
+constraint alldifferent([square[i,j] | i in 1..n, j in 1..n]);
+constraint forall(i in 1..n)(sum(j in 1..n)(square[i,j]) = n*(n*n+1) div 2);
+constraint forall(j in 1..n)(sum(i in 1..n)(square[i,j]) = n*(n*n+1) div 2);
+constraint sum(i in 1..n)(square[i,i]) = n*(n*n+1) div 2;
+constraint sum(i in 1..n)(square[i,n-i+1]) = n*(n*n+1) div 2;
+solve satisfy;
+output [show(square[i,j]) ++ if j == n then "\n" else " " endif | i in 1..n, j in 1..n]; 

@@ -1,0 +1,7 @@
+---
+description: 
+globs: 
+alwaysApply: false
+---
+测试文件请放到test文件夹中。
+测试脚本请放到scripts文件夹中。
