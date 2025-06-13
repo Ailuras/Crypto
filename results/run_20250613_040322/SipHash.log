@@ -1,0 +1,53 @@
+MODEL: SipHash
+FILE: benchmarks/CP/siphash/SipHash.mzn
+TEST_START: Fri Jun 13 04:03:22 AM UTC 2025
+TIMEOUT: 1200s
+SOLVERS: cp-sat chuffed choco
+===========================================================
+
+===========================================================
+SOLVER: cp-sat
+MODEL: SipHash.mzn
+PATH: benchmarks/CP/siphash/SipHash.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:03:22 AM UTC 2025
+-----------------------------------------------------------
+=====UNKNOWN=====
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:23:22 AM UTC 2025
+SOLVING_TIME: 1200.066313180
+RESULT: TIMEOUT
+
+===========================================================
+SOLVER: chuffed
+MODEL: SipHash.mzn
+PATH: benchmarks/CP/siphash/SipHash.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:23:22 AM UTC 2025
+-----------------------------------------------------------
+arithmetic.cpp:251: The constraint int_pow is not yet supported for non-negative base and exponent integer!=====ERROR=====
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:23:24 AM UTC 2025
+SOLVING_TIME: 1.780493950
+RESULT: ERROR
+EXIT_CODE: 1
+
+===========================================================
+SOLVER: choco
+MODEL: SipHash.mzn
+PATH: benchmarks/CP/siphash/SipHash.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:23:24 AM UTC 2025
+-----------------------------------------------------------
+% Choco-solver (5.0.0-beta.1, 250217_17:45)
+=====UNKNOWN=====
+%% Unexpected resolution interruption!
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:43:24 AM UTC 2025
+SOLVING_TIME: 1200.150371528
+RESULT: TIMEOUT
+
+===========================================================
+TEST_COMPLETE: Fri Jun 13 04:43:24 AM UTC 2025
+TOTAL_SOLVERS: 3
+===========================================================

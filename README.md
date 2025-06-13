@@ -198,3 +198,5 @@ logs/
    # 手动禁用emoji
    python3 scripts/compare_solvers.py --no-emoji
    ``` 
+
+bash scripts/parallel.sh --models-dir benchmarks/CP --timeout 1200 --max-parallel 5

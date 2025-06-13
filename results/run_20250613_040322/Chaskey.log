@@ -1,0 +1,53 @@
+MODEL: Chaskey
+FILE: benchmarks/CP/chaskey/Chaskey.mzn
+TEST_START: Fri Jun 13 04:03:22 AM UTC 2025
+TIMEOUT: 1200s
+SOLVERS: cp-sat chuffed choco
+===========================================================
+
+===========================================================
+SOLVER: cp-sat
+MODEL: Chaskey.mzn
+PATH: benchmarks/CP/chaskey/Chaskey.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:03:22 AM UTC 2025
+-----------------------------------------------------------
+=====UNKNOWN=====
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:23:22 AM UTC 2025
+SOLVING_TIME: 1200.045711370
+RESULT: TIMEOUT
+
+===========================================================
+SOLVER: chuffed
+MODEL: Chaskey.mzn
+PATH: benchmarks/CP/chaskey/Chaskey.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:23:22 AM UTC 2025
+-----------------------------------------------------------
+arithmetic.cpp:251: The constraint int_pow is not yet supported for non-negative base and exponent integer!=====ERROR=====
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:23:23 AM UTC 2025
+SOLVING_TIME: .992497110
+RESULT: ERROR
+EXIT_CODE: 1
+
+===========================================================
+SOLVER: choco
+MODEL: Chaskey.mzn
+PATH: benchmarks/CP/chaskey/Chaskey.mzn
+TIMEOUT: 1200
+START_TIME: Fri Jun 13 04:23:23 AM UTC 2025
+-----------------------------------------------------------
+% Choco-solver (5.0.0-beta.1, 250217_17:45)
+=====UNKNOWN=====
+%% Unexpected resolution interruption!
+-----------------------------------------------------------
+END_TIME: Fri Jun 13 04:43:23 AM UTC 2025
+SOLVING_TIME: 1200.113451567
+RESULT: TIMEOUT
+
+===========================================================
+TEST_COMPLETE: Fri Jun 13 04:43:23 AM UTC 2025
+TOTAL_SOLVERS: 3
+===========================================================

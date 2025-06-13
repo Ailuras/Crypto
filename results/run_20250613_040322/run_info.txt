@@ -1,0 +1,17 @@
+MiniZinc Solver Performance Comparison
+======================================
+Start time: Fri Jun 13 04:03:22 AM UTC 2025
+Models directory: benchmarks/CP
+Output directory: results/run_20250613_040322
+Timeout: 1200s
+Solvers: cp-sat chuffed choco
+Max parallel tasks: 5
+Total models: 5
+
+Model files:
+  - Alzette.mzn
+  - Chaskey.mzn
+  - SipHash.mzn
+  - Speck.mzn
+  - xoodoo.mzn
+

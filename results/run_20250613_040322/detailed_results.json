@@ -1,0 +1,92 @@
+[
+  {
+    "model": "Alzette",
+    "solver": "cp-sat",
+    "status": "TIMEOUT",
+    "time": 1200.054095155
+  },
+  {
+    "model": "Alzette",
+    "solver": "chuffed",
+    "status": "ERROR",
+    "time": 0.72446249
+  },
+  {
+    "model": "Alzette",
+    "solver": "choco",
+    "status": "TIMEOUT",
+    "time": 1200.139877568
+  },
+  {
+    "model": "Chaskey",
+    "solver": "cp-sat",
+    "status": "TIMEOUT",
+    "time": 1200.04571137
+  },
+  {
+    "model": "Chaskey",
+    "solver": "chuffed",
+    "status": "ERROR",
+    "time": 0.99249711
+  },
+  {
+    "model": "Chaskey",
+    "solver": "choco",
+    "status": "TIMEOUT",
+    "time": 1200.113451567
+  },
+  {
+    "model": "SipHash",
+    "solver": "cp-sat",
+    "status": "TIMEOUT",
+    "time": 1200.06631318
+  },
+  {
+    "model": "SipHash",
+    "solver": "chuffed",
+    "status": "ERROR",
+    "time": 1.78049395
+  },
+  {
+    "model": "SipHash",
+    "solver": "choco",
+    "status": "TIMEOUT",
+    "time": 1200.150371528
+  },
+  {
+    "model": "Speck",
+    "solver": "cp-sat",
+    "status": "TIMEOUT",
+    "time": 1200.034913678
+  },
+  {
+    "model": "Speck",
+    "solver": "chuffed",
+    "status": "ERROR",
+    "time": 0.771024664
+  },
+  {
+    "model": "Speck",
+    "solver": "choco",
+    "status": "TIMEOUT",
+    "time": 1200.300596967
+  },
+  {
+    "model": "xoodoo",
+    "solver": "cp-sat",
+    "status": "TIMEOUT",
+    "time": 1200.148763646
+  },
+  {
+    "model": "xoodoo",
+    "solver": "chuffed",
+    "status": "TIMEOUT",
+    "time": 1200.090642594
+  },
+  {
+    "model": "xoodoo",
+    "solver": "choco",
+    "status": "TIMEOUT",
+    "time": 1200.136398116
+  }
+]

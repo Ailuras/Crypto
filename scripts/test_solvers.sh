@@ -13,9 +13,30 @@ echo "Available solvers:"
 echo "=================="
 minizinc --solvers
 echo ""
-echo "Testing working solvers..."
-echo "=========================="
-working_solvers=("coin-bc" "cp-sat")
+echo "Detecting available CP solvers..."
+echo "================================="
+
+# 获取实际存在的fzn-xxx可执行文件
+actual_fzn_solvers=()
+for fzn in "$MINIZINC_BIN"/fzn-*; do
+    [ -x "$fzn" ] || continue
+    solver_name=$(basename "$fzn" | sed 's/^fzn-//')
+    actual_fzn_solvers+=("$solver_name")
+done
+
+# 检测CP求解器并与实际可用fzn-xxx交集
+cp_solvers=("cp-sat" "chuffed" "choco")
+echo "Using fixed CP solvers: ${cp_solvers[*]}"
+echo ""
+
+if [ ${#cp_solvers[@]} -eq 0 ]; then
+    echo "❌ No usable CP solvers found"
+    exit 1
+fi
+echo "Found usable CP solvers: ${cp_solvers[*]}"
+echo ""
+echo "Testing CP solvers..."
+echo "===================="
 models=(
     "test/simple_sudoku.mzn:Simple 3x3 Sudoku"
     "test/magic_square.mzn:3x3 Magic Square"
@@ -25,7 +46,7 @@ models=(
 )
 test_count=0
 success_count=0
-for solver in "${working_solvers[@]}"; do
+for solver in "${cp_solvers[@]}"; do
     echo "🔧 Testing solver: $solver"
     echo "================================"
     
@@ -73,8 +94,6 @@ echo "Tests run: $test_count"
 echo "Successful: $success_count"
 echo "Success rate: $(( success_count * 100 / test_count ))%"
 echo ""
-echo "💡 To install more solvers:"
-echo "   brew install minizinc-gecode  # For Gecode CP solver"
-echo "   brew install highs             # For HiGHS LP solver"
+echo "💡 Available CP solvers tested: ${cp_solvers[*]}"
 echo ""
 echo "Test completed!" 

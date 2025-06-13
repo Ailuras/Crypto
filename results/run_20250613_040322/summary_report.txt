@@ -1,0 +1,22 @@
+MiniZinc Solver Performance Comparison Report
+==================================================
+Test completed: Fri Jun 13 05:03:22 AM UTC 2025
+Total time: 3600s
+Models tested: 5
+Solvers: cp-sat, chuffed, choco
+
+Performance Summary (seconds):
+----------------------------------------
+Model                cp-sat     chuffed    choco     
+----------------------------------------
+Alzette              FAIL       FAIL       FAIL       
+Chaskey              FAIL       FAIL       FAIL       
+SipHash              FAIL       FAIL       FAIL       
+Speck                FAIL       FAIL       FAIL       
+xoodoo               FAIL       FAIL       FAIL       
+
+Success Rate by Solver:
+-------------------------
+cp-sat         :  0/5 (  0.0%)
+chuffed        :  0/5 (  0.0%)
+choco          :  0/5 (  0.0%)
