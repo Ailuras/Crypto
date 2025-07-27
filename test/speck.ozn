@@ -1,0 +1,8 @@
+output ["Round "++format(i)++": Left = "++format(slice_1d(vars,[i..i,0..0,-infinity..infinity],index_set_3of3(vars)))++", Right = "++format(slice_1d(vars,[i..i,1..1,-infinity..infinity],index_set_3of3(vars)))++"\n" | i in 0..rounds]++["Total weight: "++format(total_weight)++"\n"];
+int: n = 32;
+int: rounds = 10;
+array [1..704] of int: X_INTRODUCED_18_;
+array [0..rounds,0..1,0..n-1] of int: vars = array3d(0..10,0..1,0..31,X_INTRODUCED_18_);
+array [1..10] of int: X_INTRODUCED_723_;
+array [0..rounds-1] of int: weights = array1d(0..9,X_INTRODUCED_723_);
+int: total_weight = sum([weights[i] | i in 0..rounds-1]);
